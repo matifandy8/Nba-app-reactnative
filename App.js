@@ -1,15 +1,16 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import DiscoverScreen from './screens/DiscoverScreen';
+import { StyleSheet} from 'react-native';
+import MainContainer from './navigation/MainContainer';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <DiscoverScreen/>
-    </View>
+    <MainContainer style={styles.main}/>
   );
 }
 
 const styles = StyleSheet.create({
- 
+    main: {
+      backgroundColor: '#181829',
+      color: '#555',
+    },
 });
