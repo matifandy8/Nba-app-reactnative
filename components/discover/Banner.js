@@ -2,7 +2,6 @@ import * as React from "react";
 import { StyleSheet} from 'react-native';
 
 import { View, Text,Image } from "react-native";
-const image = { uri: "https://i.ibb.co/pdCpxsg/Rectangle-62.png" };
 
 export default function Banner() {
   return (
@@ -25,8 +24,7 @@ export default function Banner() {
 const styles = StyleSheet.create({
     container: {
         width: '100%',
-        height: 300,
-        borderRadius: 10,
+        height: 250,
         marginLeft: 0,
     },
     text: {
