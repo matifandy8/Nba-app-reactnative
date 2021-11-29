@@ -1,5 +1,6 @@
 import * as React from "react";
-import { View, Text, Image, ScrollView, FlatList } from "react-native";
+import { View, Text, Image, ScrollView, FlatList, Touchable } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 const DATA = [
   {
     id: "1",
@@ -45,7 +46,7 @@ const DATA = [
   },
 ];
 
-export default function Games() {
+export default function Games({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.title}>
@@ -59,7 +60,9 @@ export default function Games() {
           showsHorizontalScrollIndicator={false}
           data={DATA}
           renderItem={({ item }) => (
-            <View style={styles.game}>
+            <TouchableOpacity onPress={() => {
+              navigation.navigate('GameDetails', {selectedGame: item})
+            }} style={styles.game}>
               <View style={styles.teamImages}>
                 <Image source={item.imageOne} style={styles.img} />
                 <Image source={item.imageTwo} style={styles.img} />
@@ -70,7 +73,7 @@ export default function Games() {
                 <Text style={styles.text}>VS</Text>
                 <Text style={styles.text}>{item.nameTwo}</Text>
               </View>
-            </View>
+            </TouchableOpacity>
           )}
           keyExtractor={(item) => item.id}
         />

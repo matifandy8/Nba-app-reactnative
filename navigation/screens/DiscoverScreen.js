@@ -10,7 +10,7 @@ export default function DiscoverScreen({ navigation }) {
         <ScrollView contentContainerStyle={{ flex: 1, alignItems: 'center', justifyContent: 'flex-start' }}>
             <Banner/>
             <Teams/>
-            <Games/>
+            <Games navigation={navigation}/>
         </ScrollView>
     );
 }
