@@ -57,7 +57,9 @@ export default function Teams() {
         showsHorizontalScrollIndicator={false}
           data={DATA}
           renderItem={({ item }) => (
+            <View style={styles.team} >
             <Image source={item.image} style={styles.img} />
+            </View>
           )}
           keyExtractor={(item) => item.id}
         />
@@ -93,6 +95,14 @@ const styles = {
     flexDirection: "row",
     justifyContent: "space-around",
   },
+  team: {
+    shadowColor: '#171717',
+    shadowOffset: {width: -2, height: 4},
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
+    margin: 10,
+  },
+
   img: {
     width: 60,
     height: 65,
