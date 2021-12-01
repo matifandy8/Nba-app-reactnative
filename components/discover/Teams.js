@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Text, Image, ScrollView, FlatList } from "react-native";
+import { View, Text, Image, ScrollView, FlatList ,StyleSheet} from "react-native";
 const DATA = [
   {
     id: "1",
@@ -68,8 +68,8 @@ export default function Teams() {
   );
 }
 
-//styles
-const styles = {
+
+const styles = StyleSheet.create({
   container: {
     width: "100%",
   },
@@ -109,4 +109,4 @@ const styles = {
     borderRadius: 20,
     margin: 10,
   },
-};
+});

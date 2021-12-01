@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Text, Image, ScrollView, FlatList, Touchable } from "react-native";
+import { View, Text, Image, ScrollView, FlatList, Touchable,StyleSheet } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 const DATA = [
   {
@@ -82,8 +82,7 @@ export default function Games({navigation}) {
   );
 }
 
-//styles
-const styles = {
+const styles = StyleSheet.create({
   container: {
     width: "100%",
   },
@@ -137,4 +136,4 @@ const styles = {
     borderRadius: 20,
     margin: 10,
   },
-};
+});
